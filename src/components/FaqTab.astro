@@ -13,7 +13,7 @@ const { question, answer, last } = Astro.props;
 
 <details name="faq" class="group">
   <summary
-    class="~text-base/lg ~gap-2/6 hover:text-pink flex list-none flex-row items-center justify-between text-balance font-semibold hover:cursor-pointer"
+    class="~text-base/lg ~gap-2/6 hover:text-pink flex list-none list-image-none appearance-none flex-row items-center justify-between text-balance font-semibold hover:cursor-pointer"
   >
     {question}
     <IconPlus />
@@ -26,3 +26,9 @@ const { question, answer, last } = Astro.props;
 </details>
 
 {!last && <hr class="h-[0.0625rem] w-full rounded-full border-light-pink" />}
+
+<style scoped>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
