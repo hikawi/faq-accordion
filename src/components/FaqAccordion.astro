@@ -1,0 +1,20 @@
+---
+import IconStar from "./icons/IconStar.astro";
+import FaqSection from "./FaqSection.astro";
+---
+
+<main
+  class="~p-6/10 ~rounded-lg/2xl ~gap-6/8 flex w-full max-w-[37.5rem] flex-col bg-white"
+>
+  <div class="flex flex-row items-center gap-6">
+    <IconStar />
+    <h1 class="~text-3.5xl/5.5xl font-bold">FAQs</h1>
+  </div>
+  <FaqSection />
+</main>
+
+<style scoped>
+  main {
+    box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.1);
+  }
+</style>

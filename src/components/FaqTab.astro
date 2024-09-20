@@ -1,0 +1,28 @@
+---
+import IconPlus from "./icons/IconPlus.astro";
+import IconMinus from "./icons/IconMinus.astro";
+
+interface Props {
+  question: string;
+  answer: string;
+  last?: boolean;
+}
+
+const { question, answer, last } = Astro.props;
+---
+
+<details name="faq" class="group">
+  <summary
+    class="~text-base/lg ~gap-2/6 hover:text-pink flex list-none flex-row items-center justify-between text-balance font-semibold hover:cursor-pointer"
+  >
+    {question}
+    <IconPlus />
+    <IconMinus />
+  </summary>
+
+  <p class="~text-sm/base pt-6 text-gray-purple">
+    {answer}
+  </p>
+</details>
+
+{!last && <hr class="h-[0.0625rem] w-full rounded-full border-light-pink" />}
