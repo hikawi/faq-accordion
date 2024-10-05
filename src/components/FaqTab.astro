@@ -1,6 +1,6 @@
 ---
-import IconPlus from "./icons/IconPlus.astro";
 import IconMinus from "./icons/IconMinus.astro";
+import IconPlus from "./icons/IconPlus.astro";
 
 interface Props {
   question: string;
@@ -13,14 +13,14 @@ const { question, answer, last } = Astro.props;
 
 <details name="faq" class="group">
   <summary
-    class="~text-base/lg ~gap-2/6 hover:text-pink flex list-none list-image-none appearance-none flex-row items-center justify-between text-balance font-semibold hover:cursor-pointer"
+    class="flex list-none list-image-none appearance-none flex-row items-center justify-between text-balance font-semibold ~text-base/lg ~gap-2/6 hover:cursor-pointer hover:text-pink group-focus-within:text-pink"
   >
     {question}
     <IconPlus />
     <IconMinus />
   </summary>
 
-  <p class="~text-sm/base pt-6 text-gray-purple">
+  <p class="pt-6 text-gray-purple ~text-sm/base">
     {answer}
   </p>
 </details>

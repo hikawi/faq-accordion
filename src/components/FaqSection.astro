@@ -5,7 +5,7 @@ const questions = [
   "What is Frontend Mentor, and how will it help me?",
   "Is Frontend Mentor free?",
   "Can I use Frontend Mentor projects in my portfolio?",
-  "How can I get help if I'm stuck on a Frontend Mentor challenge?",
+  "How can I get help if I'm stuck on a challenge?",
 ];
 const answers = [
   "Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.",
@@ -18,13 +18,7 @@ const answers = [
 <section class="flex flex-col gap-6">
   {
     questions.map((question, idx) => {
-      return (
-        <FaqTab
-          question={question}
-          answer={answers[idx]}
-          last={idx === questions.length - 1}
-        />
-      );
+      return <FaqTab question={question} answer={answers[idx]} last={idx === questions.length - 1} />;
     })
   }
 </section>
